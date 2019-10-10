@@ -1,0 +1,12 @@
+nav {
+  width: 100%;
+  text-align: center;
+  margin: 30px 0;
+  
+}
+button{
+  padding: 15px;
+  box-shadow: black 2px 3px;
+  font-size: large;
+  width: 150px
+}

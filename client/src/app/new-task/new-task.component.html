@@ -1,0 +1,10 @@
+<form [formGroup]="taskForm" (ngSubmit)="addTask()">
+    <input type="text" placeholder="description" formControlName="description">
+    <select formControlName="name" placeholder="select">
+        <option value="" disabled selected>Select name</option>
+        <option *ngFor="let f of familyName" [value]="f.name">{{f.name}}</option>
+    </select>
+    <input class="date" type="text" formControlName="date" disabled>
+    <input class="sub" type="submit" value="create new task">
+</form>
+<!-- <h1>{{taskForm.value | json}}</h1> -->

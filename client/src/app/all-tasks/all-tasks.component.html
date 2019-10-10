@@ -1,0 +1,20 @@
+<h1>Family Tasks</h1>
+<!-- <h4>{{tasksString}}</h4> -->
+<table>
+    <thead>
+        <th>name</th>
+        <th>description</th>
+        <th>date</th>
+        <th>delete</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let t of allTasks">
+            <td>{{t.name}}</td>
+            <td>{{t.description}}</td>
+            <td class="date">{{t.date}}</td>
+            <td class="button">
+                <button [id]="t._id" (click)="deleteTask(t._id)">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

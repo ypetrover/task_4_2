@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+form {
+    color: white;
+    text-align: center;
+    margin: 50px auto;
+}
+
+input, select {
+    padding: 5px;
+    margin: 10px auto;
+    display: block;
+    width: 20vw;
+}
+
+.sub {
+    padding: 10px;
+    box-shadow: black 2px 3px;
+    font-size: medium;
+    width: 20vw
+}
+
+.date{
+    text-align: center;
+}

@@ -1,0 +1,7 @@
+<form [formGroup]="famForm" (ngSubmit)="addFam()">
+    <input type="text" placeholder="name" formControlName="name">
+    <input type="text" placeholder="nik" formControlName="nik">
+    <input type="text" placeholder="description" formControlName="description">
+    <input class="sub" type="submit" value="create new familyer">
+</form>
+<!-- {{famForm.value | json}} -->
