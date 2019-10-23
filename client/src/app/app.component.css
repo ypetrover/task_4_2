@@ -2,11 +2,11 @@ nav {
   width: 100%;
   text-align: center;
   margin: 30px 0;
-  
 }
-button{
+
+button {
   padding: 15px;
-  box-shadow: black 2px 3px;
+  box-shadow: #0000008f 2px 3px 5px 0px;
   font-size: large;
   width: 150px
 }
