@@ -12,6 +12,10 @@ export class FamilyTasksService {
   public allFamily() {
     return this.http.get('http://localhost:3000/api/all-family')
   }
+  
+  public oneFamily(name) {
+    return this.http.get(`http://localhost:3000/api/all-family/${name}`)
+  }
 
   public allTasks() {
     return this.http.get('http://localhost:3000/api/all-tasks')
@@ -21,12 +25,20 @@ export class FamilyTasksService {
     return this.http.post('http://localhost:3000/api/new-task', task)
   }
   
+  public delete(id) {
+    return this.http.delete(`http://localhost:3000/api/delete/${id}`)
+  }
+  
   public newFam(task) {
     return this.http.post('http://localhost:3000/api/new-familyer', task)
   }
   
-  public delete(id) {
-    return this.http.delete(`http://localhost:3000/api/delete/${id}`)
+  public deleteFam(name) {
+    return this.http.delete(`http://localhost:3000/api/delete-familyer/${name}`)
+  }
+  
+  public editFam(data) {
+    return this.http.get(`http://localhost:3000/api/edit-familyer/${data.name}/?name=${data.data.name}&nik=${data.data.nik}&desc=${data.data.description}`)
   }
 
 }
