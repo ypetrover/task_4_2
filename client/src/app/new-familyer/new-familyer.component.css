@@ -17,7 +17,26 @@ input {
 
 .sub {
     padding: 10px;
-    box-shadow: black 2px 3px;
+    box-shadow: #0000008f 2px 3px 5px 0px;
     font-size: medium;
-    width: 20vw
+    width: 20vw;
+}
+
+#edit {
+    display: flex;
+    margin: auto;
+}
+
+#edit input {
+    margin: 0;
+    width: 125px;
+}
+
+#edit select {
+    width: 250px;
+}
+
+#editDiv{
+    text-align: center;
+    display: grid;
 }
