@@ -4,4 +4,25 @@
     <input type="text" placeholder="description" formControlName="description">
     <input class="sub" type="submit" value="create new familyer">
 </form>
-<!-- {{famForm.value | json}} -->
+<!-- 
+<div *ngIf="name.errors.required">
+    Name is required.
+  </div> -->
+
+<div id="editDiv">
+    <form id="edit" [formGroup]="editFam" (ngSubmit)="editFalse(n)">
+        <select id="select" formControlName="name" #n (change)="name($event)">
+            <option value="null" disabled selected>Select name</option>
+            <option *ngFor="let f of familyName" [id]="f.name" [value]="f.name">{{f.name}}</option>
+        </select>
+        <input class="sub" type="button" (click)="deleteFam(n)" value="delete">
+        <input class="sub" type="submit" value="edit familyer">
+    </form>
+
+    <form *ngIf="ifEdit" id="edit" [formGroup]="editFam" (ngSubmit)="test(n)">
+        <input type="text" placeholder="name" formControlName="name" ngModel required>
+        <input type="text" placeholder="nik" formControlName="nik">
+        <input type="text" placeholder="description" formControlName="description">
+        <input class="sub" type="button" (click)="edit()" value="save">
+    </form>
+</div>
